@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+
+:root {
+  --border: oklch(0.8622 0.0068 286.26);
+  --ring: oklch(0.8312 0.0069 286.25);
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0 0 0);
+
+  --sidebar: oklch(0.9626 0.0066 286.27);
+  --sidebar-foreground: oklch(0 0 0);
+
+  --accent: oklch(0.9233 0.0067 286.27);
+  --accent-foreground: oklch(0 0 0);
+
+  --red: oklch(0.6542 0.2321 28.66);
+  --red-foreground: oklch(1 0 0);
+  --green: oklch(0.7303 0.1944 147.44);
+  --green-foreground: oklch(1 0 0);
+  --teal: oklch(0.7886 0.1225 230.83);
+  --teal-foreground: oklch(1 0 0);
+
+  --muted: oklch(0.9626 0.0066 286.27);
+  --muted-foreground: oklch(0.752 0.0057 286.26);
+}
+
+@theme inline {
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-red: var(--red);
+  --color-red-foreground: var(--red-foreground);
+  --color-green: var(--green);
+  --color-green-foreground: var(--green-foreground);
+  --color-teal: var(--teal);
+  --color-teal-foreground: var(--teal-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

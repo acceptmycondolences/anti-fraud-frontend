@@ -1,0 +1,6 @@
+export * from '@/shared/ui/button'
+export * from '@/shared/ui/container'
+export * from '@/shared/ui/data-table'
+export * from '@/shared/ui/form'
+export * from '@/shared/ui/input'
+export * from '@/shared/ui/label'
