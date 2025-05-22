@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { use } from 'react'
 
 import { useFormContext, useFormState } from 'react-hook-form'
 
@@ -6,7 +6,7 @@ import { FormFieldContext } from '@/shared/context'
 import { useFormItem } from '@/shared/hooks'
 
 export function useFormField() {
-  const context = useContext(FormFieldContext)
+  const context = use(FormFieldContext)
 
   const { getFieldState } = useFormContext()
 

@@ -2,10 +2,10 @@ import { createContext } from 'react'
 
 import type { FieldPath, FieldValues } from 'react-hook-form'
 
-export type FormFieldContextProps<
+export interface FormFieldContextProps<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-> = {
+> {
   name: TName
 }
 

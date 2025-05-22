@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 
-export type FormItemContextProps = {
+export interface FormItemContextProps {
   id: string
 }
 

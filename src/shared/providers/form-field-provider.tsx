@@ -1,3 +1,5 @@
+import { useMemo } from 'react'
+
 import {
   Controller,
   type ControllerProps,
@@ -11,9 +13,11 @@ export function FormFieldProvider<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({ ...props }: ControllerProps<TFieldValues, TName>) {
+  const value = useMemo(() => ({ name: props.name }), [props.name])
+
   return (
-    <FormFieldContext.Provider value={{ name: props.name }}>
+    <FormFieldContext value={value}>
       <Controller {...props} />
-    </FormFieldContext.Provider>
+    </FormFieldContext>
   )
 }

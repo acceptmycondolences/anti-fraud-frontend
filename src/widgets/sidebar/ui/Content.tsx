@@ -45,7 +45,7 @@ export function SidebarContent() {
     <>
       <div className="flex justify-between border-b px-4 pb-4">
         <Button
-          onClick={() => navigate('/')}
+          onClick={() => void navigate('/')}
           variant="teal"
           size="icon"
           className="rounded-full"
@@ -91,7 +91,7 @@ export function SidebarContent() {
         <div className="px-4 pb-4">
           <Button
             onClick={() => {
-              navigate('/actions')
+              void navigate('/actions')
 
               if (isOpenMobile) {
                 toggle()

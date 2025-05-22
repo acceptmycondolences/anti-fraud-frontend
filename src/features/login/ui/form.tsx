@@ -36,7 +36,7 @@ export function LoginForm() {
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit(onSubmit)}
+        onSubmit={void form.handleSubmit(onSubmit)}
         className="flex flex-col gap-6"
       >
         <div className="space-y-4">

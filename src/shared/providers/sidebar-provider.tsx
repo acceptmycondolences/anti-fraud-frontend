@@ -50,7 +50,5 @@ export function SidebarProvider({ children }: PropsWithChildren) {
     [isOpen, isOpenMobile, isMobile, toggle]
   )
 
-  return (
-    <SidebarContext.Provider value={value}>{children}</SidebarContext.Provider>
-  )
+  return <SidebarContext value={value}>{children}</SidebarContext>
 }

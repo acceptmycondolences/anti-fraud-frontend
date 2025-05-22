@@ -13,7 +13,7 @@ export function useActionsQuery({
   params?: ActionsQueryParamsType
 }) {
   return useQuery({
-    queryKey: ['actions'],
+    queryKey: ['actions', params],
     queryFn: async () =>
       (await axiosInstance.get<ActionResponseType>('/actions', { params }))
         .data,

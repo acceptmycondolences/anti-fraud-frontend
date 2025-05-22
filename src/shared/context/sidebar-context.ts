@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 
-export type SidebarContextProps = {
+export interface SidebarContextProps {
   isOpen: boolean
   setIsOpen: (open: boolean) => void
   isOpenMobile: boolean

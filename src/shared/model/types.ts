@@ -29,7 +29,7 @@ interface ResponseType<TData> {
   empty: boolean
 }
 
-type QueryParamsType = {
+interface QueryParamsType {
   page: number
   size: number
   sort: SortType[]

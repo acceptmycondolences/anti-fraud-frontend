@@ -34,6 +34,7 @@ const buttonVariants = cva(
 )
 
 export function Button({
+  type,
   variant,
   size,
   disabled,
@@ -43,6 +44,7 @@ export function Button({
   return (
     <button
       disabled={disabled}
+      type={type}
       className={cn(buttonVariants({ variant, size, disabled, className }))}
       {...props}
     />

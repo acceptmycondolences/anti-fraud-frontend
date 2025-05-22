@@ -5,6 +5,7 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import reactX from 'eslint-plugin-react-x'
 import reactDom from 'eslint-plugin-react-dom'
+import prettierConfig from 'eslint-config-prettier'
 import pluginQuery from '@tanstack/eslint-plugin-query'
 
 export default tseslint.config(
@@ -14,7 +15,7 @@ export default tseslint.config(
       js.configs.recommended,
       ...tseslint.configs.recommendedTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
-      'prettier',
+      prettierConfig,
     ],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
